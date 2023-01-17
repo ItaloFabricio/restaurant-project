@@ -33,10 +33,13 @@ export default{
                 {label: 'Combos', icon: 'Combo', id:'combo'},
                 {label: 'Doces', icon: 'Deserts', id:'deserts'},
                 {label: 'Bebidas', icon: 'Drinks', id:'drinks'},
-                {label: 'Burguers', icon: 'Burguer', id:'burguer'}
+                {label: 'Burguers', icon: 'Burguer', id:'burguers'}
             ],
-            selectedCategory: 'pizza'
+            selectedCategory: ''
         }
+    },
+    mounted(){
+        this.onCategoryClick('pizza');
     },
     methods: {
         onCategoryClick(id){

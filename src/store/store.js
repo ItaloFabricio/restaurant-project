@@ -1,20 +1,20 @@
-import Vue from "vue"
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-      selectedCategory: ''
+        selectedCategory: ''
     },
     mutations: {
-      changeCategory(state, id) {
-        state.selectedCategory = id;
-      }
+        changeCategory(state, id) {
+            state.selectedCategory = id;
+        }
     },
     actions: {
         changeCategory(context, id) {
-        context.commit('changeCategory'), id
-      }
+            context.commit('changeCategory', id);
+        }
     }
-  })
+});

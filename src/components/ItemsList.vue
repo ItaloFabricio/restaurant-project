@@ -9,7 +9,6 @@
 
 <script>
 
-// eslint-disable-next-line no-unused-vars
 import axios from 'axios';
 import ItemCard from './ItemCard.vue';
 
@@ -21,12 +20,27 @@ export default {
     data() {
         return {
             itemsList: []
+        };
+    },
+    created() {},
+    computed: {
+        selectedCategory: {
+            get() {
+                return this.$store.state.selectedCategory;
+            }
         }
     },
-    created() {
-        axios.get('http://localhost:3000/burguers').then((response) => {
-            this.itemsList = response.data;
-        });
+    methods: {
+        getItemsList() {
+            axios.get(`http://localhost:3000/${this.selectedCategory}`).then((response) => {
+                this.itemsList = response.data;
+            });
+        }
+    },
+    watch: {
+        selectedCategory() {
+            this.getItemsList();
+        }
     }
 };
 
