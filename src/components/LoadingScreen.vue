@@ -11,12 +11,13 @@ export default {
 
 <style lang="less" scoped>
     .loading{
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         border: 3px solid @light-yellow;
         border-top: @yellow;
         animation: spin 1s linear infinite;
+        margin: auto;
     }
 
     @keyframes spin{
