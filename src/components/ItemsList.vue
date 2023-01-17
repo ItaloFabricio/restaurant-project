@@ -1,5 +1,6 @@
 <template>
     <div class="items-list">
+      <LoadingScreen />
       <ItemCard 
         v-for="item in itemsList" :key="item.id"
         :item="item"
@@ -11,11 +12,13 @@
 
 import axios from 'axios';
 import ItemCard from './ItemCard.vue';
+import LoadingScreen from './LoadingScreen.vue';
 
 export default {
     name: 'ItemsList',
     components:{
-      ItemCard
+      ItemCard,
+      LoadingScreen
     } ,  
     data() {
         return {
