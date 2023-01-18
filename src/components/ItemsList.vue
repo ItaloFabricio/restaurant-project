@@ -59,6 +59,7 @@ export default {
     margin: 50px;
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
 
     @media @tablets{
       flex-wrap: wrap;
