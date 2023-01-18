@@ -50,12 +50,19 @@ export default {
         height: 290px;
         border-radius: 8px;
         background: white;
+        box-shadow: rgba(202, 204, 205, 0.2) 0px 8px 24px;
         position: relative;
         margin: 20px;
         padding: 20px;
+        cursor: pointer;
 
         display: flex;
         flex-direction: column;
+        transition: .4s ease-in-out;
+
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
 
         &--tag{
             position: absolute;
