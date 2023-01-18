@@ -43,7 +43,7 @@ export default {
                     this.itemsList = response.data;
                     this.isLoading = false;
                 });
-            }, 2000);
+            }, 1000);
         }
     },
     watch: {
