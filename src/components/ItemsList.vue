@@ -28,10 +28,8 @@ export default {
     },
     created() {},
     computed: {
-        selectedCategory: {
-            get() {
-                return this.$store.state.selectedCategory;
-            }
+        selectedCategory() {          
+                return this.$store.state.selectedCategory;        
         }
     },
     methods: {
@@ -43,7 +41,7 @@ export default {
                     this.itemsList = response.data;
                     this.isLoading = false;
                 });
-            }, 1000);
+            }, 500);
         }
     },
     watch: {
