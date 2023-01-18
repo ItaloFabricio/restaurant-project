@@ -1,13 +1,20 @@
 <template>
   <div class="cart">
     <h2 class="cart-title">Seu pedido</h2>
-    {{cartList}}
+    <CartItem v-for="item in cartList" :key="item.id" 
+    :item="item"
+    />
   </div>
 </template>
 
 <script>
+import CartItem from './CartItem.vue';
+
 export default {
     name: 'CartShop',
+    components:{
+        CartItem
+    },
     computed:{
         cartList(){
             return this.$store.state.cartList;
