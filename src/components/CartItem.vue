@@ -1,5 +1,6 @@
 <template>
   <div class="item">
+    {{ item.quantity }}
     <div class="item--img--container">
         <img class="item--img" :src="imagePath">
     </div>
