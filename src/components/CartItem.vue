@@ -47,7 +47,7 @@ export default {
         }
 
         &--img{
-            width: 65px;
+            width: 100%;
             display: block;
             margin: auto;
         }
