@@ -2,7 +2,7 @@
   <div class="home">
     <CategoryMenu />
     <ItemsList />
-    <CartShop />
+    <CartShop v-if="isDesktop()"/>
   </div>
 </template>
 
@@ -21,6 +21,12 @@ export default {
     ItemsList,
     CartShop
   },
+  methods:{
+    isDesktop(){
+      const width = window.innerWidth;
+      return width > 767;
+    } 
+  }
  
 }
 
