@@ -11,7 +11,7 @@
 import CategoryMenu from '@/components/CategoryMenu.vue'
 import ItemsList from '@/components/ItemsList.vue';
 import CartShop from '@/components/CartShop.vue';
-
+import Mixin from '@/mixins/mixins';
 
 
 export default {
@@ -21,13 +21,7 @@ export default {
     ItemsList,
     CartShop
   },
-  methods:{
-    isDesktop(){
-      const width = window.innerWidth;
-      return width > 767;
-    } 
-  }
- 
+  mixins: [Mixin]
 }
 
 </script>
