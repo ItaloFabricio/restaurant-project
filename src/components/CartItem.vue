@@ -68,6 +68,12 @@ export default {
                 font-weight: 600;
                 font-size: 18px;
                 cursor: pointer;
+                background: none;
+                border: 0;
+
+                &:focus{
+                    outline: 0;
+                }
             }
         }
 
